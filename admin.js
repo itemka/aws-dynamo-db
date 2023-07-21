@@ -1,14 +1,8 @@
 const AWS = require('aws-sdk');
 const { createServer } = require('dynamodb-admin');
+const { dynamodbOptions } = require("./src/config/dynamodbOptions");
 
-const dynamodb = new AWS.DynamoDB({
-  region: "local",
-  endpoint: "http://localhost:8000",
-  credentials:{
-    accessKeyId: "fake",
-    secretAccessKey: "fake"
-  }
-});
+const dynamodb = new AWS.DynamoDB(dynamodbOptions);
 
 const dynClient = new AWS.DynamoDB.DocumentClient({ service: dynamodb });
 

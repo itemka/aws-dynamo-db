@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1419.0",
+    "dotenv": "^16.3.1",
     "dynamodb-admin": "^4.5.0"
   }
 }

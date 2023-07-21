@@ -1,7 +1,7 @@
-const AWS = require('aws-sdk');
-const { dynamodbOptions } = require("./config/dynamodbOptions");
+const { dynamodb } = require("./db/dynamodb");
+const { checkRunningQueryCallback } = require("./helpers/checkRunningQueryCallback");
 
-const dynamodb = new AWS.DynamoDB(dynamodbOptions);
+const { DYNAMODB_TABLE } = process.env;
 
 const dynamodbParams = {
   AttributeDefinitions: [
@@ -28,17 +28,10 @@ const dynamodbParams = {
     ReadCapacityUnits: 1,
     WriteCapacityUnits: 1
   },
-  TableName: 'customer-list',
+  TableName: DYNAMODB_TABLE,
   StreamSpecification: {
     StreamEnabled: false
   }
 };
 
-dynamodb.createTable(dynamodbParams, (error, data) => {
-  if (error) {
-    console.log("Error", error);
-  } else {
-    console.log("Table Created", data);
-  }
-});
-
+dynamodb.createTable(dynamodbParams, checkRunningQueryCallback);

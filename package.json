@@ -4,5 +4,13 @@
   "main": "index.js",
   "repository": "https://github.com/itemka/aws-dynamo-db.git",
   "author": "Artsem Paulenka <itemka2503@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "db": "sudo docker compose -f docker-compose.yml up",
+    "admin": "node admin.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1419.0",
+    "dynamodb-admin": "^4.5.0"
+  }
 }

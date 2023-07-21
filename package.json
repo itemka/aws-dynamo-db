@@ -1,0 +1,8 @@
+{
+  "name": "aws-dynamo-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/itemka/aws-dynamo-db.git",
+  "author": "Artsem Paulenka <itemka2503@gmail.com>",
+  "license": "MIT"
+}

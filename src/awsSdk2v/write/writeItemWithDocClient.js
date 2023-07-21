@@ -1,5 +1,5 @@
-const { docClient } = require("./db/docClient");
-const { checkRunningQueryCallback } = require("./helpers/checkRunningQueryCallback");
+const { docClient } = require("../../db/docClient");
+const { checkRunningQueryCallback } = require("../../helpers/checkRunningQueryCallback");
 
 const { DYNAMODB_TABLE } = process.env;
 

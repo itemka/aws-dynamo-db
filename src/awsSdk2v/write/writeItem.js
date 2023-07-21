@@ -1,5 +1,5 @@
-const { dynamodb } = require("./db/dynamodb");
-const { checkRunningQueryCallback } = require("./helpers/checkRunningQueryCallback");
+const { dynamodb } = require("../../db/dynamodb");
+const { checkRunningQueryCallback } = require("../../helpers/checkRunningQueryCallback");
 
 const { DYNAMODB_TABLE } = process.env;
 

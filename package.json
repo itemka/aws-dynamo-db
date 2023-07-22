@@ -7,7 +7,16 @@
   "license": "MIT",
   "scripts": {
     "db": "sudo docker compose -f docker-compose.yml up",
-    "admin": "node admin.js"
+    "admin": "node admin.js",
+    "createTable": "node src/awsSdkv2/create/createTable.js",
+    "write": "node src/awsSdkv2/write/writeItem.js",
+    "writeDocClient": "node src/awsSdkv2/write/writeItemWithDocClient.js",
+    "read": "node src/awsSdkv2/read/readItem.js",
+    "readDocClient": "node src/awsSdkv2/read/readItemWithDocClient.js",
+    "update": "node src/awsSdkv2/update/updateItem.js",
+    "updateDocClient": "node src/awsSdkv2/update/updateItemWithDocClient.js",
+    "delete": "node src/awsSdkv2/delete/deleteItem.js",
+    "deleteDocClient": "node src/awsSdkv2/delete/deleteItemWithDocClient.js"
   },
   "dependencies": {
     "aws-sdk": "^2.1419.0",

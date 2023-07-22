@@ -12,7 +12,11 @@ const dynamodbParams = {
     {
       AttributeName: 'customerName',
       AttributeType: 'S'
-    }
+    },
+    {
+      AttributeName: 'age',
+      AttributeType: 'S'
+    },
   ],
   KeySchema: [
     {
@@ -22,7 +26,10 @@ const dynamodbParams = {
     {
       AttributeName: 'customerName',
       KeyType: 'RANGE'
-    }
+    },
+    {
+      AttributeName: 'age',
+    },
   ],
   ProvisionedThroughput: {
     ReadCapacityUnits: 1,

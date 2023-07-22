@@ -1,5 +1,5 @@
-const { dynamodb } = require("./db/dynamodb");
-const { checkRunningQueryCallback } = require("./helpers/checkRunningQueryCallback");
+const { dynamodb } = require("../../db/dynamodb");
+const { checkRunningQueryCallback } = require("../../helpers/checkRunningQueryCallback");
 
 const { DYNAMODB_TABLE } = process.env;
 
@@ -12,7 +12,11 @@ const dynamodbParams = {
     {
       AttributeName: 'customerName',
       AttributeType: 'S'
-    }
+    },
+    {
+      AttributeName: 'age',
+      AttributeType: 'S'
+    },
   ],
   KeySchema: [
     {
@@ -22,7 +26,10 @@ const dynamodbParams = {
     {
       AttributeName: 'customerName',
       KeyType: 'RANGE'
-    }
+    },
+    {
+      AttributeName: 'age',
+    },
   ],
   ProvisionedThroughput: {
     ReadCapacityUnits: 1,

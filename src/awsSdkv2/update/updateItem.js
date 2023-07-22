@@ -7,19 +7,19 @@ const dynamodbParams = {
   TableName: DYNAMODB_TABLE,
   Key: {
     customerId: {
-      N: '2'
+      N: '1'
     },
     customerName: {
-      S: 'Richard Roe 2',
+      S: 'Richard Roe',
     }
   },
-  UpdateExpression: 'SET #age = :age',
+  UpdateExpression: 'SET #secondName = :secondName',
   ExpressionAttributeNames: {
-    '#age': 'age',
+    '#secondName': 'secondName',
   },
   ExpressionAttributeValues: {
-    ':age': {
-      'S': '20'
+    ':secondName': {
+      'S': 'test second name'
     }
   },
 };

@@ -16,7 +16,9 @@
     "update": "node src/awsSdkv2/update/updateItem.js",
     "updateDocClient": "node src/awsSdkv2/update/updateItemWithDocClient.js",
     "delete": "node src/awsSdkv2/delete/deleteItem.js",
-    "deleteDocClient": "node src/awsSdkv2/delete/deleteItemWithDocClient.js"
+    "deleteDocClient": "node src/awsSdkv2/delete/deleteItemWithDocClient.js",
+    "queryTable": "node src/awsSdkv2/query/queryTable.js",
+    "queryTableWithDocClient": "node src/awsSdkv2/query/queryTableWithDocClient.js"
   },
   "dependencies": {
     "aws-sdk": "^2.1419.0",

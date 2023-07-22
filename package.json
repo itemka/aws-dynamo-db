@@ -18,7 +18,9 @@
     "delete": "node src/awsSdkv2/delete/deleteItem.js",
     "deleteDocClient": "node src/awsSdkv2/delete/deleteItemWithDocClient.js",
     "queryTable": "node src/awsSdkv2/query/queryTable.js",
-    "queryTableWithDocClient": "node src/awsSdkv2/query/queryTableWithDocClient.js"
+    "queryTableWithDocClient": "node src/awsSdkv2/query/queryTableWithDocClient.js",
+    "scanTable": "node src/awsSdkv2/scan/scanTable.js",
+    "scanTableWithDocClient": "node src/awsSdkv2/scan/scanTableWithDocClient.js"
   },
   "dependencies": {
     "aws-sdk": "^2.1419.0",

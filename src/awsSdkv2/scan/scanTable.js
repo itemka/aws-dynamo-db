@@ -5,23 +5,16 @@ const { DYNAMODB_TABLE } = process.env;
 
 const dynamodbParams = {
   TableName: DYNAMODB_TABLE,
-  Key: {
-    customerId: {
-      N: '1'
-    },
-    customerName: {
-      S: 'Richard Roe',
-    }
-  },
-  UpdateExpression: 'SET #secondName = :secondName',
+  FilterExpression: 'begins_with(#secondName, :startText)',
   ExpressionAttributeNames: {
     '#secondName': 'secondName',
   },
   ExpressionAttributeValues: {
-    ':secondName': {
-      'S': 'test second name'
-    }
+    ":startText": {
+      S: "s",
+    },
   },
+  ProjectionExpression: "customerName, age",
 };
 
-dynamodb.updateItem(dynamodbParams, checkRunningQueryCallback);
+dynamodb.scan(dynamodbParams, checkRunningQueryCallback);

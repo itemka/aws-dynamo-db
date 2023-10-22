@@ -4,6 +4,7 @@ const { checkRunningQueryCallback } = require("../../helpers/checkRunningQueryCa
 const { DYNAMODB_TABLE } = process.env;
 
 const dynamodbParams = {
+  TableName: DYNAMODB_TABLE,
   AttributeDefinitions: [
     {
       AttributeName: 'customerId',
@@ -35,7 +36,6 @@ const dynamodbParams = {
     ReadCapacityUnits: 1,
     WriteCapacityUnits: 1
   },
-  TableName: DYNAMODB_TABLE,
   StreamSpecification: {
     StreamEnabled: false
   }
